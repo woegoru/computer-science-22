@@ -105,4 +105,122 @@ One of the most popular sets of rules for the design of code for Java was writte
 Use auto-formatting after finishing work on the code block and before sending the code to the remote repository. May your code be clean and beautiful!
 ```
 
+<a id="s5-code-style-in-practice"></a>
+<a id="5-code-style-in-practice"></a>
 
+<a id="code-style-in-practice"></a>
+## 5 Code style in practice
+
+Now let's look at the basic rules that are in Code Style, and how to use them in your work projects.
+
+<a id="s5.1-the-name-of-the-file-must-match-the-name-of-the-main-class-in-it"></a>
+<a id="51-the-name-of-the-file-must-match-the-name-of-the-main-class-in-it"></a>
+
+<a id="the-name-of-the-file-must-match-the-name-of-the-main-class-in-it"></a>
+### 5.1 The name of the file must match the name of the main class in it
+
+Classes in java are located in separate extension files.java, and the file name must strictly match the class name, including the case.
+
+```
+❗️ Incorrect: the main file.java
+
+✅ Correct: the file is named as a class — Main.java
+```
+
+<a id="s5.2-names-of-classes-and-interfaces"></a>
+<a id="52-names-of-classes-and-interfaces"></a>
+
+<a id="names-of-classes-and-interfaces"></a>
+### 5.2 Names of classes and interfaces
+
+Classes and interfaces are named with a capital letter. If the name consists of several words, then each word also begins with a capital letter. Underscores and dashes are not used. This naming style is called UpperCamelCase.
+
+```
+❗️ Incorrect: phoneBook, full_name, main, result-list
+
+✅ Correct: PhoneBook, FullName, Main, resultList
+```
+
+The class is usually called a noun: Car, Bird, ArrayList, Book. It is possible to add a clarifying adjective ImmutableList.
+
+An interface, like a class, can be a noun: List, Set, Map. And also an adjective if it indicates a property: Readable, Comparable, Closable.
+
+It is worth noting the test classes separately, it is customary to add the word Test to them at the end: HashTest, HashIntegrationTest
+
+
+<a id="s5.3-names-of-methods"></a>
+<a id="53-names-of-methods"></a>
+
+<a id="names-of-methods"></a>
+### 5.3 Names of methods
+
+Methods are named with a lowercase (small) letter; if the name consists of several words, then each subsequent word begins with a capital letter. Underscores and dashes are not used. This naming style is called lowerCamelCase.
+
+```
+❗️ Incorrect: Print(), get-Size(), Main(), is_hidden()
+
+✅ Correct: print(), getSize(), main(), isHidden()
+```
+
+Methods are actions, so they are commonly called verbs: SendMessage (), stop (), parse (), add ()
+
+Separately, you can cancel getters and setters. The name of the getter method is formed from the variable name and the get prefix. If the variable is length, then getter: getLength (). If a boolean variable is named isAlive, then the geter will also be called is Alive (), being the answer to the question in the name of the method.
+
+Setters are formed according to the same principle, but with the prefix set. Continuing the examples above: for length, the setter will be SetLength(). For a boolean isAlive type variable, the setter will be without the prefix setAlive ().
+
+<a id="s5.4-names-of-variables"></a>
+<a id="54-names-of-variables"></a>
+
+<a id="names-of-variables"></a>
+### 5.4 Names of variables
+
+Variables are named with a lowercase (small) letter; if the name consists of several words, then each subsequent word begins with a capital letter. Underscores and dashes are not used. This naming style is called lowerCamelCase.
+
+Variable names in general are nouns or compound nouns with the addition of adjectives.
+
+```
+❗️ Incorrect: PostService, e_mail, post-id, _email
+
+✅ Correct: post Service, email, post Id, isAlive
+```
+
+These rules apply to local variables (inside methods), class parameters, as well as to non-static constants.
+
+
+<a id="s5.5-names-of-constants"></a>
+<a id="55-names-of-constants"></a>
+
+<a id="names-of-constants"></a>
+### 5.5 Names of constants
+
+Constants are named in the SNAKE_CASE style, that is, words are separated by underscores and all letters are uppercase (large)
+
+Static final fields are considered constants, but not all of them. The field must be a primitive, String, or an immutable class. That is, the parameters of the constant class should not be able to change, and its methods should have side effects affecting other classes. Enum elements are also constants.
+
+
+<a id="s5.6-do-not-use-transliteration"></a>
+<a id="56-do-not-use-transliteration"></a>
+
+<a id="do-not-use-transliteration"></a>
+### 5.6 Do not use transliteration
+
+Use only English for naming methods, variables, and classes. Using English is an accepted standard so that your code is understandable to everyone. Transliteration is much worse to read, and if someone is not familiar with Russian, he will not understand the meaning of the name at all. If you are having trouble choosing a name, use Google translator. So, by the way, you will replenish your vocabulary.
+
+```
+❗️ Incorrect: invoice, quantity, content, full name
+
+ ✅ Correct: invoice, amount, contains name, full name
+```
+
+<a id="s5.7-curly-braces"></a>
+<a id="57-curly-braces"></a>
+
+<a id="curly-braces"></a>
+### 5.7 Curly braces
+ 
+The curly brace opens on the same line as the front code.
+
+Always place the body of a conditional statement or loop in {}, even if it is a single line. This way you can avoid mistakes, if you try to add a second line, do not forget to enclose it in curly brackets.
+
+
+ 
