@@ -64,16 +64,45 @@ A single style increases the speed of reading code, facilitates interaction betw
 ```
 
 
-<a id="s2-auto-formatting-in-the-ide"></a>
-<a id="2-auto-formatting-in-the-ide"></a>
+<a id="s3-auto-formatting-in-the-ide"></a>
+<a id="3-auto-formatting-in-the-ide"></a>
 
 <a id="auto-formatting-in-the-ide"></a>
-## 3 auto-formatting-in-the-ide
+## 3 Auto-formatting in the IDE
 
 Every popular development environment has built-in tools for auto-formatting code. The table shows the hotkeys for formatting an open file in popular IDEs.
 
 ```
-__Formatting a package or an entire project in IntelliJ IDEA__
+Formatting a package or an entire project in IntelliJ IDEA
 
 Select the desired package in the project tree and call Reformat using keyboard shortcuts. Alternatively, you can right-click on the package and select Reformat Code. A dialog box will open in which, in addition to formatting, you will be asked to optimize imports (remove unnecessary ones and tidy up existing ones in accordance with Code Style). It is recommended to check this item and click OK.
 ```
+The result of executing the autoformatting command:
+
+```java
+  public static void main(String[], args) {
+    int a = 101;
+
+    for (int i = 0; i < a; i++) {
+      System.out.printf("%d%n, i");
+    }
+  }
+}
+```
+
+
+<a id="s4-enabling-rules-in-the-ide"></a>
+<a id="4-enabling-rules-in-the-ide"></a>
+
+<a id="enabling-rules-in-the-ide"></a>
+## 4 Enabling rules in the IDE
+
+Java code style conventions vary, and in addition, developers can use their own modifications. In order for the whole team to have the same code style, it can be set in the development environment.
+
+One of the most popular sets of rules for the design of code for Java was written by Google. It's called Google Java Style Guide and is available on GitHub (https://google.github.io/styleguide/javaguide.html). You can easily install it in your favorite IDE you are working with.
+
+```
+Use auto-formatting after finishing work on the code block and before sending the code to the remote repository. May your code be clean and beautiful!
+```
+
+
