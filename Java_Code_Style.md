@@ -43,4 +43,37 @@ The reasons why the developers came to such agreements are logical and simple:
 - The correct design of the code makes it easier to read. Even if the program text is written by different teams, it will be understandable to each developer, and the speed of perception will be high.
 - It is much easier to maintain programs and compare code versions when the files have a consistent style.
 
+```
+The use of generally accepted design conventions allows you to make the code more accurate, avoid mistakes associated with different writing styles for people working on the same project.
+```
 
+<a id="s2-formatting-in-practice"></a>
+<a id="2-formatting-in-practice"></a>
+
+<a id="formatting-in-practice"></a>
+## 2 Formatting in practice
+
+Style does not play a role for a computer, but it is important for a person to read the code. Our vision is designed in such a way that it first receives and analyzes images, and only then we go into details. And if the blocks of the source text are unified, the developer understands what kind of construction is in front of him, even without delving into the code itself.
+
+Seeing such a construction, the programmer immediately understands that it is if ... else. He will read it instantly and go to study the code further. And if the eye comes across something different from the usual, reading immediately switches to a slow letter-by-letter mode.
+
+If the formatting style changes from design to design, it makes it difficult to read patterns — we stumble with our eyes on every non-standard written line.
+
+```
+A single style increases the speed of reading code, facilitates interaction between teams, and also has an aesthetic component. The orchestra will not be able to play well until all the participants agree and begin to fall into the same rhythm.
+```
+
+
+<a id="s2-auto-formatting-in-the-ide"></a>
+<a id="2-auto-formatting-in-the-ide"></a>
+
+<a id="auto-formatting-in-the-ide"></a>
+## 3 auto-formatting-in-the-ide
+
+Every popular development environment has built-in tools for auto-formatting code. The table shows the hotkeys for formatting an open file in popular IDEs.
+
+```
+__Formatting a package or an entire project in IntelliJ IDEA__
+
+Select the desired package in the project tree and call Reformat using keyboard shortcuts. Alternatively, you can right-click on the package and select Reformat Code. A dialog box will open in which, in addition to formatting, you will be asked to optimize imports (remove unnecessary ones and tidy up existing ones in accordance with Code Style). It is recommended to check this item and click OK.
+```
